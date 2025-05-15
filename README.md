@@ -19,8 +19,8 @@ npm run dev
 npm run build
 ```
 
-### Tests
-## Unit Tests
+## Tests
+### Unit Tests
 Created using vitest
 To run
 
@@ -28,7 +28,7 @@ To run
 npx vitest
 ```
 
-## E2E tests
+### E2E tests
 Created using Cypress
 To run headless
 ```sh
@@ -44,5 +44,5 @@ Select the browser you wish to use.
 Then select stories.cy. 
 The tests will then run. 
 
-### Assumptions
+## Assumptions
 While there is a search bar on the UI there is no functionality implemented for it. Also while the Hackernews site allows the uploading of comments this redesign does not as there is no API to support that.
