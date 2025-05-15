@@ -39,7 +39,7 @@ To run using web UI
 ```sh
 nx cypress open
 ```
-Then in the Cypree UI that opens selest E2E testing. 
+Then in the Cypress UI that opens selest E2E testing. 
 Select the browser you wish to use. 
 Then select stories.cy. 
 The tests will then run. 
