@@ -20,7 +20,7 @@ npm run build
 ```
 
 ### Tests
-##Unit Tests
+## Unit Tests
 Created using vitest
 To run
 
@@ -28,7 +28,7 @@ To run
 npx vitest
 ```
 
-##E2E tests
+## E2E tests
 Created using Cypress
 To run headless
 ```sh
