@@ -22,6 +22,7 @@ npm run build
 ## Tests
 ### Unit Tests
 Created using vitest
+
 To run
 
 ```sh
@@ -30,6 +31,7 @@ npx vitest
 
 ### E2E tests
 Created using Cypress
+
 To run headless
 ```sh
 npx cypress run
