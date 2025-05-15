@@ -1,22 +1,45 @@
 <script setup>
+import { timeAgo } from '@/utils/formatTime'
+import { truncate } from '@/utils/truncateText'
+
     defineProps({
-        item: Object
+        item: Object,
+        type: String,
     });
 </script>
 
 <template>
 <div>
-  <b-card :title='item.title' :subtitle='item.by' class="h-100 d-flex flex-column pb-2" style="min-height: 300px">
-    <b-card-text class="flex-grow-1">
-        {{ item.text ? item.text.slice(0, 90) + (item.text.length > 90 ? '...' : '') : '' }}
+  <b-card
+  class="h-100 d-flex flex-column pb-2"
+  :title="null"
+  role="article"
+  style="min-height: 300px;"
+  :aria-labelledby="`post-${item.id}-title`"
+>
+  <h3 id="post-{{ item.id }}-title">{{ item.title }}</h3>
+  <p><strong>By:</strong> {{ item.by }}</p>
+    <b-card-text v-if="item.text" class="flex-grow-1">
+        {{ truncate(item.text, 100) }}
     </b-card-text>
 
-    <a href="#" class="card-link">Card link</a>
-    <b-link href="#" class="card-link">Another link</b-link>
+    <b-link v-if="item.url" :href="item.url" target="_blank">Read More</b-link>
+
+    <b-link :to="`/item/${item.id}`" class="card-link">View Comments</b-link>
+
     <template #footer>
-        <em>{{item.score}} points, {{item.descendants}} comments</em>
-    </template>
+      <p aria-label="Post meta information">
+        <time :datetime="new Date(item.time * 1000).toISOString()">
+          {{ timeAgo(item.time) }}
+        </time>,
+        {{ item.score }} points
+        <template v-if="type !== 'job' && item.descendants">
+          , {{ item.descendants }} comments
+        </template>
+      </p>
+</template>
   </b-card>
 </div>
     
 </template>
+

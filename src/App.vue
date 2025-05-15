@@ -1,7 +1,9 @@
 <script setup>
+  import { ref } from 'vue';
   import Navbar from '@/components/navbar.vue';
   import CardGroup from '@/components/cardGroup.vue';
-  import PostCard from '@/components/postCard.vue';
+
+  const storyType = ref('top')
 
 </script>
 
@@ -9,13 +11,14 @@
 <template>
   <div>
     <Navbar />
-    <CardGroup />
+    <router-view />
   </div>
 </template>
 
 <style scoped>
-  body, html {
-  margin: 0;
-  padding: 0;
-}
-</style>
+ body, html {
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow-x: hidden !important;
+ }
+ </style>
