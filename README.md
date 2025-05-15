@@ -1,14 +1,5 @@
 # interface
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
@@ -28,8 +19,27 @@ npm run dev
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Tests
+##Unit Tests
+Created using vitest
+To run
 
 ```sh
-npm run lint
+npx vitest
 ```
+
+##E2E tests
+Created using Cypress
+To run headless
+```sh
+npx cypress run
+```
+
+To run using web UI
+```sh
+nx cypress open
+```
+Then in the Cypree UI that opens selest E2E testing
+Seect the browser you wish to use
+Then select stories.cy
+The tests will then run
