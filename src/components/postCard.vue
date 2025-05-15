@@ -16,6 +16,7 @@ import { truncate } from '@/utils/truncateText'
   role="article"
   style="min-height: 300px;"
   :aria-labelledby="`post-${item.id}-title`"
+  data-testid="post-card"
 >
   <h3 id="post-{{ item.id }}-title">{{ item.title }}</h3>
   <p><strong>By:</strong> {{ item.by }}</p>
