@@ -43,3 +43,6 @@ Then in the Cypress UI that opens selest E2E testing.
 Select the browser you wish to use. 
 Then select stories.cy. 
 The tests will then run. 
+
+###Assumptions
+While there is a search bar on the UI there is no functionality implemented for it. Also while the Hackernews site allows the uploading of comments this redesign does not as there is no API to support that.
